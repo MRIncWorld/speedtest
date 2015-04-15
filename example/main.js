@@ -104,7 +104,8 @@ $(function() {
     }
 
     function end(avg) {
-        UI.notice('Final average speed: ' + UI.value(avg / 1024 / 1024, 'MBps'));
+        UI.notice('Final average speed: ' + UI.value(((avg / 1024) / 1024), 'MBps'));
+        UI.notice('Final average speed: ' + UI.value((((avg / 1024) / 1024) * 8), 'Mbps'));
         UI.stop();
     }
 
